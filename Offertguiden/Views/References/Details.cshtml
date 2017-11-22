@@ -4,39 +4,39 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Reference</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Text)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Text)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Picture)
-        </dd>
-    </dl>
+<style>
+    body {
+        padding-top: 10%;
+        line-height: 26px;
+        font-family: Verdana;
+    }
+
+    .refPic {
+        height: 100%;
+        width: 100%;
+        padding-top: 2%;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    .h4Ref {
+        padding-top: 18%;
+    }
+</style>
+
+<div class="col-md-8">
+    <h2>@Html.DisplayFor(model => model.Title)</h2>
+
+    <img class="refPic" src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20988309_816016671890871_2553236634825829105_o.jpg?oh=5cc5dcdada32c48e9b72e47248b787f9&oe=5A3AD957" />
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ReferenceId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="col-md-4">
+
+    <h4 class="h4Ref">Om projektet</h4>
+    <p>
+        @Html.DisplayFor(model => model.Text)
+    </p>
 </div>

@@ -23,6 +23,10 @@ namespace Offertguiden.Controllers
         {
             return View(await _context.References.ToListAsync());
         }
+        public async Task<IActionResult> References()
+        {
+            return View(await _context.References.ToListAsync());
+        }
 
         // GET: References/Details/5
         public async Task<IActionResult> Details(int? id)

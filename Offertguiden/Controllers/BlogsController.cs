@@ -24,6 +24,12 @@ namespace Offertguiden.Controllers
             return View(await _context.Blogs.ToListAsync());
         }
 
+        public async Task<IActionResult> Blogs()
+        {
+            return View(await _context.Blogs.ToListAsync());
+        }
+
+
         // GET: Blogs/Details/5
         public async Task<IActionResult> Details(int? id)
         {
