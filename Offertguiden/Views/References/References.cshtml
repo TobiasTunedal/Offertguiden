@@ -54,9 +54,8 @@
     <div class="col-md-3" id="item">
         
             <a asp-action="Details" asp-route-id="@item.ReferenceId">
-            <img class="refPic" src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20988309_816016671890871_2553236634825829105_o.jpg?oh=5cc5dcdada32c48e9b72e47248b787f9&oe=5A3AD957" alt="Refbild" />
+            <img class="refPic" src="@Html.DisplayFor(modelItem => item.Picture)" alt="Refbild" />
             <h4 id="center">@Html.DisplayFor(modelItem => item.Title)</h4>
-            <h5 id="center">@Html.DisplayFor(modelItem => item.Date)</h5>
         </a>
     </div>
 }

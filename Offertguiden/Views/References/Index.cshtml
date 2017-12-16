@@ -4,11 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<br /><br /><br />
+
+<h2>Referenser</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Skapa ny Referens</a>
 </p>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -16,13 +19,7 @@
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Text)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.Date)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Picture)
                 </th>
             <th></th>
         </tr>
@@ -34,18 +31,12 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Text)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Picture)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ReferenceId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ReferenceId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ReferenceId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ReferenceId">Ändra</a> |
+                <a asp-action="Details" asp-route-id="@item.ReferenceId">Se Referensen</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReferenceId">Ta Bort</a>
             </td>
         </tr>
 }
