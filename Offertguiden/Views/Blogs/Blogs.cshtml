@@ -14,9 +14,10 @@
         font-family: Verdana;
     }
 
-    .refPic {
+    #refPic {
         height: 170px;
-        max-width: 270px;
+        max-width: 250px;
+        float: left;
     }
 
     #center {
@@ -48,6 +49,13 @@
         bottom: 0;
         height: inherit;
     }
+    .blogDescription {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
 </style>
 
 
@@ -56,20 +64,31 @@
 <br />
 <br />
 
+<div class="col-md-12">
+    <h1 id="center"> Offertguidens Blogg</h1>
+    <br />
+</div>
 
 @foreach (var item in Model)
 {
-<div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-        <h1 class="w3-text-teal">@Html.DisplayFor(modelItem => item.Title)</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+    <div class="col-lg-12">
+        <hr />
     </div>
-    <div class="w3-third w3-container">
-        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
-        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
-    </div>
-</div>
-}
+    <a asp-action="Details" asp-route-id="@item.BlogId">
+        <div class="col-md-12">
+
+            <div class="col-md-4">
+                <img id="refPic" src="@Html.DisplayFor(modelItem => item.Picture)" />
+
+            </div>
+            <div class="col-md-8">
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                <h4>@Html.DisplayFor(modelItem => item.Date)</h4>
+
+                <p class="blogDescription">
+                    @Html.DisplayFor(modelItem => item.Text)
+                </p>
+            </div>
+        </div>
+        </a>  
+        }
