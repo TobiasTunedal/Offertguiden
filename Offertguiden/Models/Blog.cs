@@ -10,8 +10,9 @@ namespace Offertguiden.Models
 {
         public class Blog
         {
-            [Key]
-            public int BlogId { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int BlogId { get; set; }
 
             [Required(ErrorMessage = "Title is required.")]
             public string Title { get; set; }

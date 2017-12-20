@@ -9,7 +9,7 @@ namespace Offertguiden.Models
     public class Reference
     {
         [Key]
-      
+        
         public int ReferenceId { get; set; }
 
         [Required(ErrorMessage = "Title is required.")]
