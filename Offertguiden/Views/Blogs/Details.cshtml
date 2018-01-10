@@ -7,17 +7,16 @@
 <link rel="stylesheet" type="text/css" href="~/css/blog.css">
 
 
-<div class="col-md-9">
-    <h2>@Html.DisplayFor(model => model.Title)</h2>
-    <h5>@Html.DisplayFor(model => model.Date)</h5>
+<div class="col-md-12">
+    <h2 id="center">@Html.DisplayFor(model => model.Title)</h2>
+    <h5 id="center">@Html.DisplayFor(model => model.Date)</h5>
     <img class="refPic" src="@Html.DisplayFor(model => model.Picture)" />
     <br /><br />
     <p>
         @Html.DisplayFor(model => model.Text)
     </p>
+    <br />
+    <a asp-action="Blogs">Tillbaka </a>
 </div>
 
-<div class="col-md-3" id="borderLeft">
-
-</div>
 

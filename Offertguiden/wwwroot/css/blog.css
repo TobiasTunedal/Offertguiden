@@ -5,6 +5,8 @@
 }
 
 .refPic {
+    display: block;
+    margin: auto;
     height: 530px;
     max-width: 100%;
     padding-top: 2%;
@@ -20,9 +22,9 @@
 
 #borderLeft {
     padding-top: 20%;
-    border-left: 1px dashed gray;
+    border-left: 1px double;
     height: 1000px;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 @media screen and (max-width: 767px) {
