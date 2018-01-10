@@ -63,6 +63,7 @@ namespace Offertguiden.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 _context.Add(blog);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

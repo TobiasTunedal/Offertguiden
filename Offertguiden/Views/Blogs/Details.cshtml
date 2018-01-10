@@ -12,7 +12,7 @@
     }
 
     .refPic {
-        height: 500px;
+        height: 530px;
         max-width: 100%;
         padding-top: 2%;
     }
@@ -25,14 +25,15 @@
         padding-top: 18%;
     }
     #borderLeft {
-        border-left: 1px ridge gray;
+        padding-top: 20%;
+        border-left: 1px dashed gray;
         height: 1000px;
     }
 </style>
 
-<div class="col-md-8">
+<div class="col-md-9">
     <h2>@Html.DisplayFor(model => model.Title)</h2>
-    <h5>Skapad: @Html.DisplayFor(model => model.Date)</h5>
+    <h5>@Html.DisplayFor(model => model.Date)</h5>
     <img class="refPic" src="@Html.DisplayFor(model => model.Picture)" />
     <br /><br />
     <p>
@@ -40,7 +41,7 @@
     </p>
 </div>
 
-<div class="col-md-4" id="borderLeft">
+<div class="col-md-3" id="borderLeft">
 
 </div>
 
