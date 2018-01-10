@@ -42,12 +42,14 @@
         display: none;
     }
     #aaLogo{
-        display: block;
-        margin: auto;
+        display: none;
         
     }
     .footerH4{
         padding-top:10%;
     }
-
+    #loggaIn {
+        display: none;
+    }
+    
 }
